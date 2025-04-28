@@ -15,7 +15,7 @@
         .nav-link { color: #fff !important; font-size: 1.2rem; padding: 0.75rem 1.5rem !important; }
         .nav-link:hover { color: #D2691E !important; }
         .hero { background: url('const3.jpg') no-repeat center/cover; height: 90vh; position: relative; }
-        .hero-logo { height: 225px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .hero-logo { height: 225px; position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); }
         .hero-text { width: 100%; display: flex; flex-direction: column; align-items: center; position: absolute; bottom: 12vh; }
         .hero p { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2rem; color: #333333; margin-bottom: 1rem; }
         .section { padding: 5rem 0; }
@@ -34,10 +34,15 @@
         /* Lighten navbar toggler */
         .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
 
+        /* Mobile-specific styles */
+        @media (max-width: 991px) {
+            .hero-text { bottom: 7vh; }
+        }
+
         /* Desktop-specific styles */
         @media (min-width: 992px) {
             .hero p { font-size: 5rem; }
-            .hero-logo { height: 5880px; max-width: 70%; }
+            .hero-logo { height: 17640px; max-width: 70%; top: 40%; }
             .hero-text { width: 50%; align-items: flex-start; left: 5%; padding: 2rem; background: rgba(0, 0, 0, 0.5); border-radius: 10px; }
             .navbar-brand { font-size: 3rem; }
             .navbar-brand img { height: 240px; }
