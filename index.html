@@ -10,26 +10,26 @@
     <style>
         body { font-family: 'Roboto', sans-serif; background: #1a1a1a; color: #fff; font-size: 1.3rem; }
         .navbar { background: #1a1a1a; }
-        .navbar-brand { font-size: 1.8rem; font-weight: bold; color: #E67E22 !important; display: flex; align-items: center; }
+        .navbar-brand { font-size: 1.8rem; font-weight: bold; color: #D2691E !important; display: flex; align-items: center; }
         .navbar-brand img { height: 80px; margin-right: 10px; }
         .nav-link { color: #fff !important; font-size: 1.2rem; padding: 0.75rem 1.5rem !important; }
-        .nav-link:hover { color: #E67E22 !important; }
-        .hero { background: url('const3.jpg') no-repeat center/cover; height: 90vh; display: flex; align-items: flex-end; text-align: center; }
-        .hero-content { width: 100%; display: flex; flex-direction: column; align-items: center; padding-bottom: 2rem; }
-        .hero p { font-size: 2rem; color: #E67E22; margin-bottom: 1rem; }
-        .hero img { height: 450px; margin-bottom: 1rem; }
+        .nav-link:hover { color: #D2691E !important; }
+        .hero { background: url('const3.jpg') no-repeat center/cover; height: 90vh; position: relative; }
+        .hero-logo { height: 225px; margin-bottom: 1rem; }
+        .hero-text { width: 100%; display: flex; flex-direction: column; align-items: center; padding-bottom: 2rem; }
+        .hero p { font-size: 2rem; color: #D2691E; margin-bottom: 1rem; text-shadow: 2px 2px 0 #333333, -2px -2px 0 #333333, 2px -2px 0 #333333, -2px 2px 0 #333333; }
         .section { padding: 5rem 0; }
         .container { max-width: 1200px; }
         .service-card { background: #2a2a2a; padding: 2.5rem; border-radius: 10px; text-align: center; transition: transform 0.3s; }
         .service-card:hover { transform: translateY(-10px); }
         .service-card h4 { font-size: 1.6rem; margin-bottom: 1rem; }
         .service-card p { font-size: 1.1rem; }
-        .btn-cta { background: #E67E22; border: none; color: #fff; font-size: 1.2rem; padding: 0.75rem 2rem; }
-        .btn-cta:hover { background: #C8641B; }
+        .btn-cta { background: #D2691E; border: none; color: #fff; font-size: 1.2rem; padding: 0.75rem 2rem; }
+        .btn-cta:hover { background: #B35917; }
         .contact-form { background: #2a2a2a; padding: 3rem; border-radius: 10px; }
         .contact-form .form-label { font-size: 1.2rem; }
         footer { background: #1a1a1a; padding: 3rem 0; text-align: center; }
-        footer a { color: #E67E22; text-decoration: none; }
+        footer a { color: #D2691E; text-decoration: none; }
         h2 { font-size: 2.5rem; }
         /* Lighten navbar toggler */
         .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
@@ -37,8 +37,8 @@
         /* Desktop-specific styles */
         @media (min-width: 992px) {
             .hero p { font-size: 5rem; }
-            .hero-content { width: 50%; align-items: flex-start; margin-left: 5%; padding: 2rem 2rem 3rem 2rem; background: rgba(0, 0, 0, 0.5); border-radius: 10px; }
-            .hero img { height: 2940px; max-width: 80%; }
+            .hero-logo { height: 5880px; max-width: 70%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+            .hero-text { width: 50%; position: absolute; bottom: 15vh; left: 5%; padding: 2rem; background: rgba(0, 0, 0, 0.5); border-radius: 10px; align-items: flex-start; }
             .navbar-brand { font-size: 3rem; }
             .navbar-brand img { height: 240px; }
             .nav-link { font-size: 1.3rem; }
@@ -60,7 +60,7 @@
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -68,8 +68,8 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <img src="logo.png" alt="Axe Build Logo">
+        <img src="logo.png" alt="Axe Build Logo" class="hero-logo">
+        <div class="hero-text">
             <p>Design Build Prosper</p>
             <a href="#contact" class="btn btn-cta btn-lg">Get a Quote</a>
         </div>
